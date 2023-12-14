@@ -1,0 +1,22 @@
+<br />
+<br />
+
+<input type="text" placeholder="{{placeholder}}" value="{{value1}}" (input)="value1 = $any($event.target).value" />
+<!-- É possível fazer essa junção dos valores e alterações conforme escrito acima, na qual usamos o (input) para escutar e alterar o valor designado. -->
+<p>Texto digitado: {{value1}}</p>
+
+<br />
+<br />
+<hr />
+<br />
+<br />
+
+<!-- Outra forma de fazer esse controle é através do modelo abaixo. Usando uma diretiva do angula, para controle dos inputs -->
+<input type="text" [(ngModel)]="value2" />
+
+<!-- É possível, também, fazer um binding da estilização. 
+    Ocorre a conexão da estilização com alguma variável, dando dinamismo à estilização.
+    No exemplo abaixo, se o tamanho do texto for maior que 5, a cor será vermelha, caso contrário, azul.
+    É importante notar que o value2 é justamente uma propriedade que foi declarada dentro da classe do componente.
+-->
+<p [style.color]="value2.length > 5 ? 'red' : 'blue'">Texto digitado: {{value2}}</p>

@@ -13,8 +13,11 @@ export class Button {
 
     // Event binding
     // É necessário declarar a função que será utilizada dentro da classe.
-    getAlert() {
+    getAlert(teste: string) {
+        // É possível colocar parâmetros para serem enviados dentro do evento de click na função
+        // Se olhar no "button.component.html" haverá uma string sendo enviada.
         alert("Botão foi clicado!")
         alert(this.label)
+        alert(teste)
     }
 }
